@@ -23,7 +23,7 @@ export default function LoadingScreen() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
       >
-        Preparing something special
+        Тусгай зүйл бэлдэж байна
       </motion.p>
       <div className="loading-dots mt-3 text-2xl" style={{ color: 'var(--accent)' }}>
         <span>.</span>

@@ -6,16 +6,16 @@ interface QuestionSectionProps {
 }
 
 const playfulMessages = [
-  "Are you sure? 🥺",
-  "Think again ❤️",
-  "Please? 👉👈",
-  "I'll bring snacks 🍕",
-  "You know you want to 😄",
-  "Okay... last chance!",
-  "Pretty please? 🌹",
-  "I promise it'll be fun! 🎉",
-  "Don't break my heart 💔",
-  "One more chance? 🥹",
+  "Итгэлтэй байна уу? 🥺",
+  "Дахиад сайн бодоорой ❤️",
+  "Тэг л дээ? 👉👈",
+  "Гоё хоол авч өгнө шдээ 🍕",
+  "Чи өөрөө ч хүсэж байгааг мэдэж байна 😄",
+  "За за... сүүлийн боломж шүү!",
+  "Гуйж байна шдээ? 🌹",
+  "Гоё байна гэж амлаж байна! 🎉",
+  "Зүрхийг минь битгий шархлуулаач 💔",
+  "Дахиад нэг боломж олгох уу? 🥹",
 ]
 
 export default function QuestionSection({ onYes }: QuestionSectionProps) {
@@ -70,7 +70,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Will you go on a date with me?
+          Надтай болзоонд явах уу?
         </motion.h2>
 
         <motion.p
@@ -80,7 +80,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          I've been wanting to ask you this for a while...
+          Чамаас үүнийг асуухыг их удаан хүлээлээ...
         </motion.p>
 
         {/* Playful message */}
@@ -111,7 +111,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             whileTap={{ scale: yesScale * 0.95 }}
             aria-label="Yes, I'll go on a date"
           >
-            ❤️ Yes
+            ❤️ Тэгье
           </motion.button>
 
           <motion.button
@@ -127,7 +127,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             aria-label="No"
             style={{ position: noCount > 0 ? 'absolute' : 'relative' }}
           >
-            💔 No
+            💔 Үгүй
           </motion.button>
         </div>
 
@@ -137,7 +137,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
           >
-            (The No button seems to be running away... 🏃‍♂️)
+            (Үгүй товч зугтаад байх шиг байна... 🏃‍♂️)
           </motion.p>
         )}
       </div>

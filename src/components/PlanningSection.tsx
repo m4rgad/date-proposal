@@ -12,12 +12,12 @@ interface PlanningSectionProps {
 }
 
 const LOCATIONS = [
-  "The Rooftop Garden Café ☕🌿",
-  "Movie Theater & Popcorn 🍿🎬",
-  "Picnic in the Park 🧺🌸",
-  "Aquarium Date 🐠🌊",
-  "Late Night Drive & Ice Cream 🍦🚗",
-  "Other (I have a place in mind!)"
+  "3,4р хорооллын random байрны дээвэр",
+  "Тэнгис кинотеатрд хулгай шаах",
+  "Үлэг гүрвэлийн музейгээс араг яс дээрэмдэх",
+  "Сарны гэрэлд шорлог шаах",
+  "Гудамжинд шээх",
+  "Маньд нь бүр гоё санаа байна"
 ]
 
 export default function PlanningSection({ onComplete }: PlanningSectionProps) {
@@ -28,12 +28,12 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!date || !time || !location || (location.startsWith('Other') && !customLocation)) return
+    if (!date || !time || !location || (location === 'Маньд нь бүр гоё санаа байна' && !customLocation)) return
     
     onComplete({
       date,
       time,
-      location: location.startsWith('Other') ? customLocation : location
+      location: location === 'Маньд нь бүр гоё санаа байна' ? customLocation : location
     })
   }
 
@@ -61,21 +61,21 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
           className="font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-3"
           style={{ color: 'var(--text-primary)' }}
         >
-          Yay! Now let's plan it 💕
+          Ёооё ашгүй дээ! Одоо төлөвлөе 💕
         </motion.h2>
 
         <motion.p
           className="font-body text-base sm:text-lg mb-8"
           style={{ color: 'var(--text-secondary)' }}
         >
-          When and where would you like to go?
+          Хэзээ, хаашаа шаах уу?
         </motion.p>
 
         <form onSubmit={handleSubmit} className="space-y-6 text-left">
           {/* Date Picker */}
           <div>
             <label className="block font-body font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-              Choose a Date
+              Өдрөө сонгоно уу
             </label>
             <input
               type="date"
@@ -89,7 +89,7 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
           {/* Time Picker */}
           <div>
             <label className="block font-body font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-              Pick a Time
+              Цагаа сонгоно уу
             </label>
             <input
               type="time"
@@ -103,7 +103,7 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
           {/* Location Picker */}
           <div>
             <label className="block font-body font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-              Where should we go?
+              Хаашаа явах уу?
             </label>
             <div className="space-y-3">
               {LOCATIONS.map((loc) => (
@@ -124,20 +124,20 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
           </div>
 
           {/* Custom Location */}
-          {location.startsWith('Other') && (
+          {location === 'Маньд нь бүр гоё санаа байна' && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
             >
               <label className="block font-body font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-                Where to? ✨
+                Хаашаа юм бэ дээ? ✨
               </label>
               <input
                 type="text"
                 required
                 value={customLocation}
                 onChange={(e) => setCustomLocation(e.target.value)}
-                placeholder="Type your idea here..."
+                placeholder="Энд саналаа бичээрэй..."
                 className="w-full p-3 rounded-xl border border-rose-200 bg-white/50 focus:outline-none focus:ring-2 focus:ring-rose-400 font-body text-gray-700"
               />
             </motion.div>
@@ -149,7 +149,7 @@ export default function PlanningSection({ onComplete }: PlanningSectionProps) {
             whileTap={{ scale: 0.95 }}
           >
             <button type="submit" className="btn-yes w-full">
-              Confirm Date 💌
+              Баталгаажуулах 💌
             </button>
           </motion.div>
         </form>

@@ -143,7 +143,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          Yay!!
+          Ураа!!
         </motion.h2>
 
         <motion.p
@@ -153,7 +153,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          You just made me the happiest person.
+          Чи намайг хамгийн жаргалтай хүн болгочихлоо.
         </motion.p>
 
         {/* Divider */}
@@ -177,11 +177,11 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           transition={{ delay: 1.2 }}
         >
           <h3 className="font-display text-lg sm:text-xl font-semibold text-center mb-4" style={{ color: 'var(--text-primary)' }}>
-            Here are the details ✨
+            Дэлгэрэнгүй мэдээлэл ✨
           </h3>
-          <Detail icon="📅" label="Date" value={displayDate} />
-          <Detail icon="🕖" label="Time" value={displayTime} />
-          <Detail icon="📍" label="Location" value={dateDetails.location} />
+          <Detail icon="📅" label="Өдөр" value={displayDate} />
+          <Detail icon="🕖" label="Цаг" value={displayTime} />
+          <Detail icon="📍" label="Байршил" value={dateDetails.location} />
         </motion.div>
 
         {/* Calendar button */}
@@ -197,7 +197,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
             className="btn-calendar"
             aria-label="Add date to Google Calendar"
           >
-            📅 Add to Calendar
+            📅 Календарьт нэмэх
           </a>
         </motion.div>
 
@@ -209,7 +209,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           transition={{ delay: 2 }}
         >
           <p className="font-body text-sm mb-4 font-medium" style={{ color: 'var(--text-secondary)' }}>
-            Counting down to our date...
+            Болзоо хүртэл...
           </p>
           <Countdown targetDate={targetDate} />
         </motion.div>
@@ -222,7 +222,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}
         >
-          Can't wait to see you! 💕
+          Хурдан уулзмаар байна! 💕
         </motion.p>
       </div>
     </motion.section>

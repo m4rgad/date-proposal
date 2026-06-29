@@ -60,7 +60,7 @@ export default function LandingSection({ onOpen }: LandingSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 3.5, duration: 0.8 }}
         >
-          Please don't leave before answering...
+          Хариулахгүйгээр яваад өгч болохгүй шүү...
         </motion.p>
 
         <motion.div
