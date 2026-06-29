@@ -50,7 +50,7 @@ export default function LandingSection({ onOpen }: LandingSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          <Typewriter text="I Have Something Important to Ask You ❤️" speed={45} delay={800} />
+          <Typewriter text="Хаая сокооо күүл боё байна" speed={45} delay={800} />
         </motion.h1>
 
         <motion.p
