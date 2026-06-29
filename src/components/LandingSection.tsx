@@ -60,7 +60,7 @@ export default function LandingSection({ onOpen }: LandingSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 3.5, duration: 0.8 }}
         >
-          Хариулахгүйгээр яваад өгч болохгүй шүү...
+          Big Gee эрээпэр ганаа
         </motion.p>
 
         <motion.div
@@ -76,7 +76,7 @@ export default function LandingSection({ onOpen }: LandingSectionProps) {
             aria-label="Open my question"
           >
             <span className="relative z-10 flex items-center gap-2">
-              Open My Question
+              Онгойлгох
               <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
                 💝
               </motion.span>

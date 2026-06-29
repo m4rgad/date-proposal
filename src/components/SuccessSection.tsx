@@ -16,19 +16,19 @@ function getCalendarUrl(dateDetails: DateDetails) {
   const formatForGoogle = (d: Date) => d.toISOString().replace(/-|:|\.\d\d\d/g, "")
   const start = formatForGoogle(target)
   const end = formatForGoogle(endTarget)
-  const title = encodeURIComponent('Our Date 💕')
+  const title = encodeURIComponent('💕')
   const loc = encodeURIComponent(dateDetails.location)
-  const details = encodeURIComponent('Our special date together ❤️')
+  const details = encodeURIComponent('❤️')
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&location=${loc}&details=${details}`
 }
 
 export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
   const targetDate = useMemo(() => new Date(`${dateDetails.date}T${dateDetails.time}:00`), [dateDetails])
-  
+
   const displayDate = useMemo(() => targetDate.toLocaleDateString('en-US', {
     weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
   }), [targetDate])
-  
+
   const displayTime = useMemo(() => targetDate.toLocaleTimeString('en-US', {
     hour: 'numeric', minute: '2-digit', hour12: true
   }), [targetDate])
@@ -153,7 +153,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          Чи намайг хамгийн жаргалтай хүн болгочихлоо.
+          Гоёдоо пиздааа.
         </motion.p>
 
         {/* Divider */}
@@ -222,7 +222,7 @@ export default function SuccessSection({ dateDetails }: SuccessSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5 }}
         >
-          Хурдан уулзмаар байна! 💕
+          Гялзаарай хөөрхөнөө 💕
         </motion.p>
       </div>
     </motion.section>

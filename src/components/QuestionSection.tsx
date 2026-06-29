@@ -6,16 +6,16 @@ interface QuestionSectionProps {
 }
 
 const playfulMessages = [
-  "Итгэлтэй байна уу? 🥺",
-  "Дахиад сайн бодоорой ❤️",
-  "Тэг л дээ? 👉👈",
-  "Гоё хоол авч өгнө шдээ 🍕",
-  "Чи өөрөө ч хүсэж байгааг мэдэж байна 😄",
-  "За за... сүүлийн боломж шүү!",
-  "Гуйж байна шдээ? 🌹",
-  "Гоё байна гэж амлаж байна! 🎉",
-  "Зүрхийг минь битгий шархлуулаач 💔",
-  "Дахиад нэг боломж олгох уу? 🥹",
+  "Сайн бодоорой",
+  "Би күүл пизда ш дээ",
+  "Mиав 👉👈",
+  "3,4 боёс харьцангуй",
+  "боль2",
+  "гээшахгуюу",
+  "Яахгадэдин",
+  "Дошин дээрээ хамаа пээдий",
+  "Москва ресторан тэди",
+  "ёонгсаб он дэ трап мадафака",
 ]
 
 export default function QuestionSection({ onYes }: QuestionSectionProps) {
@@ -70,7 +70,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Надтай болзоонд явах уу?
+          Гарж орох уу?
         </motion.h2>
 
         <motion.p
@@ -80,7 +80,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          Чамаас үүнийг асуухыг их удаан хүлээлээ...
+          Хэтэрхий бад бад болохоор унана
         </motion.p>
 
         {/* Playful message */}
@@ -111,7 +111,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             whileTap={{ scale: yesScale * 0.95 }}
             aria-label="Yes, I'll go on a date"
           >
-            ❤️ Тэгье
+            ❤️ Шаая
           </motion.button>
 
           <motion.button
@@ -127,7 +127,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             aria-label="No"
             style={{ position: noCount > 0 ? 'absolute' : 'relative' }}
           >
-            💔 Үгүй
+            💔 Шаахгүй
           </motion.button>
         </div>
 
@@ -137,7 +137,7 @@ export default function QuestionSection({ onYes }: QuestionSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.6 }}
           >
-            (Үгүй товч зугтаад байх шиг байна... 🏃‍♂️)
+            (пахахахахах 🏃‍♂️)
           </motion.p>
         )}
       </div>

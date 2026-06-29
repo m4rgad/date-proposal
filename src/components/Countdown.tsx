@@ -25,19 +25,19 @@ export default function Countdown({ targetDate }: CountdownProps) {
     <div className="flex justify-center gap-4 sm:gap-6 flex-wrap" role="timer" aria-label="Countdown to date">
       <div className="countdown-item">
         <div className="countdown-value">{timeLeft.days}</div>
-        <div className="countdown-label">Days</div>
+        <div className="countdown-label">Өдөр</div>
       </div>
       <div className="countdown-item">
         <div className="countdown-value">{timeLeft.hours}</div>
-        <div className="countdown-label">Hours</div>
+        <div className="countdown-label">Цаг</div>
       </div>
       <div className="countdown-item">
         <div className="countdown-value">{timeLeft.minutes}</div>
-        <div className="countdown-label">Minutes</div>
+        <div className="countdown-label">Минут</div>
       </div>
       <div className="countdown-item">
         <div className="countdown-value">{timeLeft.seconds}</div>
-        <div className="countdown-label">Seconds</div>
+        <div className="countdown-label">Секунд</div>
       </div>
     </div>
   )
